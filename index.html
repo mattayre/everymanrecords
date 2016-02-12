@@ -65,7 +65,7 @@
 
 <div class="wrapper">
     <div class="parallax ">
-        <div class="parallax-image">
+        <div class="parallax-image ">
             <img src="assets/img/guitar2.jpg" alt="..." />
         </div>    
         <div class="small-info">
@@ -361,7 +361,7 @@
        var parallax = function() {
             var current_scroll = $(this).scrollTop();
             
-            oVal = ($(window).scrollTop() / 3); 
+            oVal = -($(window).scrollTop() / 3)*2; 
             big_image.css('top',oVal);
         };
 
