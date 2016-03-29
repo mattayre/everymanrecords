@@ -98,7 +98,7 @@
   max-width: 970px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 375px) {
   .parallax{
     height:55vh;
   }
@@ -112,8 +112,8 @@
   
   height: 100%;
   }
-  
-
+ } 
+@media (max-width: 768px) {
   .parallax .small-info {
     text-shadow: 0 0 10px black;
     padding: 5px;
