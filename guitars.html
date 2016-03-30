@@ -34,7 +34,7 @@
         <span class="icon-bar bar2"></span>
         <span class="icon-bar bar3"></span>
       </button>
-      <a class="navbar-brand" href="http://gsdk.creative-tim.com"><i class="fa fa-chevron-left"></i>EVERYMAN RECORDS</a>
+      <a class="navbar-brand" href=""><i class="fa fa-chevron-left"></i>EVERYMAN RECORDS</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -63,13 +63,13 @@
 </nav>
 
 <div class="wrapper">
-    <div class="parallax filter-black">
+    <div class="parallax">
         <div class="parallax-image">
             <img src="assets/img/guitar2.jpg" alt="..." />
         </div>             
-        <div class="small-info">
-            <h1>Guitars</h1>
-            <h3>Free global delivery for all products</h3> 
+        <div class="small-info" style="top:200px">
+            <h1>Electric Guitars</h1>
+            <h3>Free uk delivery for all products</h3> 
         </div>
     </div>
 
@@ -81,7 +81,7 @@
                         <div class="card card-product card-plain">
                             <div class="image">
                                 <a href="#">
-                                    <img src="assets/img/gibson4.jpg" alt="..."/>
+                                    <img src="assets/img/gui4.jpg" alt="..."/>
                                 </a>
                             </div>
                             <div class="content">
@@ -105,7 +105,7 @@
                         <div class="card card-product card-plain">
                             <div class="image">
                                 <a href="#">
-                                    <img src="assets/img/gibson4.jpg" alt="..."/>
+                                    <img src="assets/img/gui5.jpg" alt="..."/>
                                 </a>
                             </div>
                             <div class="content">
@@ -130,7 +130,7 @@
                         <div class="card card-product card-plain">
                             <div class="image">
                                 <a href="#">
-                                    <img src="assets/img/gibson4.jpg" alt="..."/>
+                                    <img src="assets/img/gui6.jpg" alt="..."/>
                                 </a>
                             </div>
                             <div class="content">
@@ -384,7 +384,7 @@
                                 <div class="card card-product card-plain">
                                     <div class="image">
                                         <a href="#">
-                                            <img src="assets/img/gibson4.jpg" alt="..."/>
+                                            <img src="assets/img/gui1.jpg" alt="..."/>
                                         </a>
                                     </div>
                                     <div class="content">
@@ -407,7 +407,7 @@
                                 <div class="card card-product card-plain">
                                     <div class="image">
                                         <a href="#">
-                                            <img src="assets/img/gibson4.jpg" alt="..."/>
+                                            <img src="assets/img/gui2.jpg" alt="..."/>
                                         </a>
                                     </div>
                                     <div class="content">
@@ -431,7 +431,7 @@
                                 <div class="card card-product card-plain">
                                     <div class="image">
                                         <a href="#">
-                                            <img src="assets/img/gibson4.jpg" alt="..."/>
+                                            <img src="assets/img/gui3.jpg" alt="..."/>
                                         </a>
                                     </div>
                                     <div class="content">
@@ -455,7 +455,7 @@
                                 <div class="card card-product card-plain">
                                     <div class="image">
                                         <a href="#">
-                                            <img src="assets/img/gibson4.jpg" alt="..."/>
+                                            <img src="assets/img/gui7.jpg" alt="..."/>
                                         </a>
                                     </div>
                                     <div class="content">
@@ -479,7 +479,7 @@
                                 <div class="card card-product card-plain">
                                     <div class="image">
                                         <a href="#">
-                                            <img src="assets/img/gibson4.jpg" alt="..."/>
+                                            <img src="assets/img/gui8.jpg" alt="..."/>
                                         </a>
                                     </div>
                                     <div class="content">
@@ -502,7 +502,7 @@
                                 <div class="card card-product card-plain">
                                     <div class="image">
                                         <a href="#">
-                                            <img src="assets/img/gibson4.jpg" alt="..."/>
+                                            <img src="assets/img/gui9.jpg" alt="..."/>
                                         </a>
                                     </div>
                                     <div class="content">
@@ -540,7 +540,7 @@
                         <div class="card card-background">
                             <a href="#">
                             <div class="image">
-                                <img src="assets/img/gibson4.jpg" alt="..." />
+                                <img src="assets/img/gui4.jpg" alt="..." />
                                 <div class="filter"></div>
                             </div>
                             <div class="footer">
@@ -554,7 +554,7 @@
                         <div class="card card-background">
                             <a href="#">
                             <div class="image">
-                                <img src="assets/img/gibson4.jpg" alt="..." />
+                                <img src="assets/img/gui5.jpg" alt="..." />
                                 <div class="filter filter-azure"></div>
                             </div>
                             <div class="footer">
@@ -568,7 +568,7 @@
                         <div class="card card-background">
                             <a href="#">
                             <div class="image">
-                                <img src="assets/img/gibson4.jpg" alt="..." />
+                                <img src="assets/img/gui6.jpg" alt="..." />
                                 <div class="filter filter-orange"></div>
                             </div>
                             <div class="footer">
@@ -832,7 +832,7 @@
        var parallax = function() {
             var current_scroll = $(this).scrollTop();
             
-            oVal = ($(window).scrollTop() / 3); 
+            oVal = -($(window).scrollTop() / 3); 
             big_image.css('top',oVal);
         };
 

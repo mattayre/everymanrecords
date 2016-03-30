@@ -48,14 +48,25 @@
             </li>
             <li>
                 <a href="effects.html">
-                     Effect Pedals
+                    Pedals
+                </a>
+            </li>
+            <li>
+                <a href="acoustic.html">
+                     Acoustic
                 </a>
             </li>
             <li>
                 <a href="guitars.html">
-                     Guitars
+                     Electric
                 </a>
             </li>
+            <li>
+                <a href="amps.html">
+                     Amps
+                </a>
+            </li>
+            
             <li><a href="blog-page.html" class="btn btn-round btn-default">Contact Us</a></li>
        </ul>
       
@@ -68,7 +79,7 @@
         <div class="parallax-image ">
             <img src="assets/img/guitar2.jpg" alt="..." />
         </div>    
-        <div class="small-info">
+        <div class="small-info" style="top:200px">
             <h1>Creating Music</h1>
             <h3>Everyman Records Music Shop</h3>    
         </div>
@@ -360,7 +371,7 @@
        var parallax = function() {
             var current_scroll = $(this).scrollTop();
             
-            oVal = -($(window).scrollTop() / 3)*2; 
+            oVal = -($(window).scrollTop() / 3); 
             big_image.css('top',oVal);
         };
 
