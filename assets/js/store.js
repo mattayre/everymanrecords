@@ -9,12 +9,12 @@ function addProduct(productname, productnumber){
   });
 }
 function addProductMain(productname, productnumber){
-  //alert("Start of addProductMain");
+  alert("Start of addProductMain");
   var product = moltin.Product.Find({slug: productname});
   var item = moltin.Cart.Insert(product[0].id, productnumber, null);
-  //alert("Product "+product[0].id+" added to cart");
+  alert("Product "+product[0].id+" added to cart");
   var cart = moltin.Cart.Contents();
-  //alert("addProductMain Number of items in cart now "+cart.total_items);
+  alert("addProductMain Number of items in cart now "+cart.total_items);
 }
 function createCart(){
   //alert("Start of createCart");
@@ -25,7 +25,7 @@ function createCart(){
 }
 function createCartMain(){
 //alert("createCartMain Number of items in cart now "+cart.total_items);
-  //alert("Start of createCartMain");
+  alert("Start of createCartMain");
   
   //Insert a product in cart
  /* var product = moltin.Product.Find({slug: 'epiphone-335-ebony'});
@@ -37,7 +37,7 @@ function createCartMain(){
 
   // create var cart which contains cart contents
   var cart = moltin.Cart.Contents();
-  //alert("Number of items in cart now "+cart.total_items);
+  alert("Number of items in cart now "+cart.total_items);
   
 
   //loop through cart collection and each time load html and moltin contents 
