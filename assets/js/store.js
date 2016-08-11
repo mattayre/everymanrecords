@@ -7,12 +7,9 @@ function addProduct(productname, productnumber){
   });
 }
 function addProductMain(productname, productnumber){
-  alert("Start of addProductMain");
   var product = moltin.Product.Find({slug: productname});
   var item = moltin.Cart.Insert(product[0].id, productnumber, null);
-  alert("Product "+product[0].id+" added to cart");
   var cart = moltin.Cart.Contents();
-  alert("addProductMain Number of items in cart now "+cart.total_items);
 }
 function createCart(){
   moltin.Authenticate(function() {
