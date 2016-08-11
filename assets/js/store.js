@@ -10,6 +10,7 @@ function addProductMain(productname, productnumber){
   var product = moltin.Product.Find({slug: productname});
   var item = moltin.Cart.Insert(product[0].id, productnumber, null);
   var cart = moltin.Cart.Contents();
+  alert("Item Added To Cart");
 }
 function createCart(){
   moltin.Authenticate(function() {
