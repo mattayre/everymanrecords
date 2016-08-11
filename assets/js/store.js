@@ -47,10 +47,7 @@ function createCartMain(){
   for (var product in cart.contents) {
         line += '<tr>';
         line += '<td>' + '<div class="img-container">';
-        alert(cart.contents[product].slug);
-        alert(cart.contents[product].title);
-        alert(cart.contents[product].description);
-        line += '<img src="assets/img/gui4.jpg" alt="..."/>'; 
+        line += '<img src="assets/img/' + cart.contents[product].slug + '.jpg' + '" alt="..."/>'; 
         line += '</div>' + '</td>';
         line += '<td class = "td-name">';
         line += '<h4 id = "productName">' + cart.contents[product].title +'</td>';
