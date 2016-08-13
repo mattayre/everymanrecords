@@ -46,7 +46,7 @@ function createCartMain(){
   line += '<td class="td-total">Total</td>';
   line += '<td class="td-price">' + cart.totals.post_discount.formatted.without_tax + '</td>';
   line += '<td><button class="btn btn-info btn-fill btn-block"' + 'data-toggle="modal"';
-  line += 'data-target="#checkoutModal" onclick="checkout()">Checkout</button></td>';
+  line += 'data-target="#checkoutModal">Checkout</button></td>';
   line += '<td></td>';
   line += '</tr>';
   el = document.getElementById('createCart');
