@@ -46,7 +46,7 @@ function createCartMain(){
   line += '<td class="td-total">Total</td>';
   line += '<td class="td-price">' + cart.totals.post_discount.formatted.without_tax + '</td>';
   line += '<td><button class="btn btn-info btn-fill btn-block"' + 'data-toggle="modal"';
-  line += 'data-target="#checkoutModal">Checkout</button></td>';
+  line += 'data-target="#checkoutModal" onclick="checkout()">Checkout</button></td>';
   line += '<td></td>';
   line += '</tr>';
   el = document.getElementById('createCart');
@@ -54,59 +54,49 @@ function createCartMain(){
 }
 
 
+function checkout(){
+  alert("start of checkout");
+  moltin.Authenticate(function() {
+    checkoutMain();
+  });
+}
+function checkoutMain(){
+  /*convert cart to order*/
+  var order = moltin.Cart.Complete({
+    gateway: 'dummy',
+    customer: {
+      first_name: 'David',
+      last_name:  'Ayre',
+      email:      'david.ayre7@gmail.com'
+    },
+    bill_to: {
+      first_name: 'David',
+      last_name:  'Ayre',
+      address_1:  '252 Nile Street',
+      address_2:  '',
+      city:       'Nelson',
+      county:     '',
+      country:    'NZ',
+      postcode:   '7010',
+      phone:      '+64-3-545-6169'
+    },
+    ship_to: 'bill_to',
+    shipping: 'free-shipping'
+  });
+  /*clear the cart*/
+  moltin.Cart.Delete();
+  /*add payment info to order*/
+  var checkout = moltin.Checkout.Payment('purchase', order.id, {
+    data: {
+      number:       '4242424242424242',
+      expiry_month: '02',
+      expiry_year:  '2017',
+      cvv:          '123'
+    }
+  });
+  alert("Checkout");
+}
 
 
 
-
-      /*
-      moltin.Authenticate(function() {
-
-      console.log("Get a product");
-      var product = moltin.Product.Find({id: productname});
-      console.log(product);
-
-      console.log("Add product to cart");
-      var item = moltin.Cart.Insert(product[0].id, 1, null);
-      console.log(item);
-
-      console.log("Convert cart to order");
-      var order = moltin.Cart.Complete({
-        gateway: 'dummy',
-        customer: {
-          first_name: 'David',
-          last_name:  'Ayre',
-          email:      'david.ayre7@gmail.com'
-        },
-        bill_to: {
-          first_name: 'David',
-          last_name:  'Ayre',
-          address_1:  '252 Nile Street',
-          address_2:  '',
-          city:       'Nelson',
-          county:     '',
-          country:    'NZ',
-          postcode:   '7010',
-          phone:      '+64-3-545-6169'
-        },
-        ship_to: 'bill_to',
-        shipping: 'free-shipping'
-      });
-      console.log(order);
-
-      console.log("Process payment");
-      var checkout = moltin.Checkout.Payment('purchase', order.id, {
-        data: {
-          number:       '4242424242424242',
-          expiry_month: '02',
-          expiry_year:  '2017',
-          cvv:          '123'
-        }
-      });
-      console.log(checkout);
-
-      console.log("End");
-      alert("End");
-      });
-      */
-     
-    
+      
